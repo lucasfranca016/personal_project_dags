@@ -1,11 +1,8 @@
 # -*- coding: utf-8 -*-
 from airflow import DAG
 import requests
-from airflow.operators.dummy_operator import DummyOperator
 from airflow.operators.subdag_operator import SubDagOperator
-from airflow.executors.sequential_executor import SequentialExecutor
 from airflow.contrib.operators.ssh_operator import SSHOperator
-from airflow.utils.dates import days_ago
 from datetime import datetime, timedelta
 
 extract = []
